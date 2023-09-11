@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity() {
 
     fun stopMusic()
     {
+        playBtn.setImageResource(R.drawable.baseline_play_arrow_24)
+        flag=1
         Intent(applicationContext,MyService::class.java).putExtra(MyService.PLAYERKEY, MyService.PLAYERVALUE).apply {
             stopService(this)
         }
